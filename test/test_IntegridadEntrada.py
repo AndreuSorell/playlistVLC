@@ -1,4 +1,4 @@
-from src.playShuffleVLC import playShuffleVLC
+from src.playshuffleVLC import playShuffleVLC
 import pytest
 
 @pytest.mark.integridadEntrada

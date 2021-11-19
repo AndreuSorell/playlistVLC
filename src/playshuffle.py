@@ -1,8 +1,14 @@
+from src.checkCancionRandom import checkCancionRandom
+from src.iniciarPlaylist import iniciarPlaylist
+from src.seleccionCancionRandom import seleccionCancionRandom
+
 def playshuffle(lib, playlist):
     assert isinstance(lib, dict) and isinstance(playlist(dict))
     assert len(playlist) == 0 and len(lib) > 0 
-#    while len(playlist) != len(lib):
-#        if seleccionrandom() not in playlist.values:
-#            playlist[iniciarplaylist()] = seleccionrandom()
-    
+    siguienteNumero = iniciarPlaylist()
+    while len(playlist) != len(lib):
+        cancionRandom = seleccionCancionRandom(lib)
+        if checkCancionRandom(playlist, cancionRandom):
+            playlist[siguienteNumero()] = cancionRandom
+    assert sorted(playlist.values()) == sorted(lib.keys())
     return playlist
