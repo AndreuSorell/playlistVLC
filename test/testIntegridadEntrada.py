@@ -3,7 +3,7 @@ import pytest
 
 @pytest.mark.integridadEntrada
 def testDiccionarioVacio():
-    assert playshuffleVLC({}) == "Porfavor, ingresa un documento con archivos"
+    assert playShuffleVLC({}) == "Porfavor, ingresa un documento con archivos"
 @pytest.mark.integridadEntrada
 def testNoDiccionario():
-    assert playshuffleVLC(["Spam"]) == "Porfavor, ingresa un diccionario"
+    assert playShuffleVLC(["Spam"]) == "Porfavor, ingresa un diccionario"
