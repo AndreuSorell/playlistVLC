@@ -1,11 +1,3 @@
-import random
-
-def seleccionCancionRandom(lib):
-    assert isinstance(lib, dict)
-    cancionRandom = random.choice(list(lib.keys()))
-    assert isinstance(cancionRandom, str)
-    return cancionRandom
-
 lib = {"California_Uber_Alles.mp3":
             {"track-number": 3,
              "artist": "Dead Kennedys",
