@@ -1,7 +1,7 @@
-from src.playshuffle import playshuffle
+from src.playShuffle import playShuffle
 import pytest
-from src.seleccionCancionRandom import lib
+from test.tests import lib
 
 @pytest.mark.playshuffleIntegro
 def testBasico():
-    assert sorted(list(playshuffle(lib, {}).values())) == sorted(list(lib.keys()))
+    assert sorted(list(playShuffle(lib, {}).values())) == sorted(list(lib.keys()))

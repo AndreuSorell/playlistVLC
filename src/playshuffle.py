@@ -2,7 +2,7 @@ from src.checkCancionRandom import checkCancionRandom
 from src.iniciarPlaylist import iniciarPlaylist
 from src.seleccionCancionRandom import seleccionCancionRandom
 from src.seleccionCancionRandom import lib
-def playshuffle(lib, playlist):
+def playShuffle(lib, playlist):
     assert isinstance(lib, dict)# and isinstance(playlist(dict))
     assert len(playlist) == 0 and len(lib) > 0 
     siguienteNumero = iniciarPlaylist()
@@ -13,4 +13,4 @@ def playshuffle(lib, playlist):
     assert sorted(playlist.values()) == sorted(lib.keys())
     return playlist
 
-playshuffle(lib, {})
+playShuffle(lib, {})
