@@ -1,9 +1,9 @@
-from src.playshuffleVLC import playshuffleVLC
+from src.playShuffleVLC import playShuffleVLC
 import pytest
 
-@pytest.mark.integridad_entrada
-def test_diccionario_vacio():
+@pytest.mark.integridadEntrada
+def testDiccionarioVacio():
     assert playshuffleVLC({}) == "Porfavor, ingresa un documento con archivos"
-@pytest.mark.integridad_entrada
-def test_no_diccionario():
+@pytest.mark.integridadEntrada
+def testNoDiccionario():
     assert playshuffleVLC(["Spam"]) == "Porfavor, ingresa un diccionario"
