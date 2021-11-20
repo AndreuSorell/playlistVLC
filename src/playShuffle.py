@@ -3,6 +3,7 @@ from src.iniciarPlaylist import iniciarPlaylist
 from src.seleccionCancionRandom import seleccionCancionRandom
 from src.seleccionCancionRandom import lib
 from src.checkPlayShuffle import checkPlayShuffle
+from src.imprimirCancionesReproducidas import imprimirCancionesReproducidas
 def playShuffle(lib, playlist):
     assert isinstance(lib, dict)# and isinstance(playlist(dict))
     assert len(playlist) == 0 and len(lib) > 0 

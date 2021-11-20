@@ -1,11 +1,27 @@
-def playShuffleVLC(Canciones):
+from src.imprimirCancionesReproducidas import imprimirCancionesReproducidas
+from src.playShuffle import playShuffle
+from src.lanzarVLC import lanzarVLC
+
+def playShuffleVLC(lib):
     try:
-        assert isinstance(Canciones, dict)
+        assert isinstance(lib, dict)
     except:
         return "Porfavor, ingresa un diccionario"
     try:
-        assert len(Canciones) > 0
+        assert len(lib) > 0
     except:
         return "Porfavor, ingresa un documento con archivos"
+    playlist = {}
+    playShuffle(lib, playlist)
+    imprimirCancionesReproducidas(playlist)
+    lanzarVLC(lib, playlist)
 
+libreria = {"California_Uber_Alles.mp3":
+                {"track-number": 3, "artist": "Dead Kennedys", "album": "Dead Kennedys", "location": "./biblioteca/California_Uber_Alles.mp3"},
+            "Seattle_Party": 
+                {"track-number": 1, "artist": "Chastity Belt", "album": "No regrets", "location": "./biblioteca/Seattle_Party.flac"},
+            "King_Kunta":
+                {"track-number": 3, "artist": "Kendrick Lamar", "album": "To Pimp A Butterfly", "location": "./biblioteca/King_Kunta.mp3"}   
+            }
 
+playShuffleVLC(libreria)
