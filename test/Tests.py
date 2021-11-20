@@ -14,3 +14,7 @@ lib = {"California_Uber_Alles.mp3":
              "album": "To Pimp A Butterfly",
              "location": "./biblioteca/King_Kunta.mp3"}
         }
+playlist = {1: "California_Uber_Alles.mp3", 2: "Spam", 3: "Eggs"}
+playlist_correcta = {1: "California_Uber_Alles.mp3", 2: "Seattle_Party", 3: "King_Kunta"}
+playlist_incorrecta1 = {1: "California_Uber_Alles.mp3", 2: "California_Uber_Alles.mp3", 3: "King_Kunta"}
+playlist_incorrecta2 = {1: "California_Uber_Alles.mp3", 2: "Seattle_Party" , 4: "King_Kunta"}
